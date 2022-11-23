@@ -28,7 +28,7 @@ class ClientPrefs {
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
-	public static var soundTestUnlocked:Bool = false;
+	public static var soundTestUnlocked:Bool = true;
 	public static var hideTime:Bool = false;
 	public static var gore:Bool = true;
 
