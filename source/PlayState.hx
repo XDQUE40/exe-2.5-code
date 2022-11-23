@@ -2286,6 +2286,11 @@ class PlayState extends MusicBeatState
 
 		center = FlxPoint.get(centerP.x, centerP.y);
 
+		#if android
+		addAndroidControls();		
+		androidControls.visible = true;		
+		#end	
+	
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -6884,21 +6889,7 @@ class PlayState extends MusicBeatState
 
 
 	function chromaVideo(name:String){
-		var video = new MP4Sprite(0,0);
-		video.scrollFactor.set();
-		video.cameras = [camHUD];
-		video.shader = new GreenScreenShader();
-		video.visible=false;
-		video.finishCallback = function(){
-			trace("video gone");
-			remove(video);
-			video.destroy();
-		}
-		video.playVideo(Paths.video(name));
-		video.readyCallback = function(){
-			video.visible=true;
-		}
-		add(video);
+		
 	}
 
 	function majinSaysFuck(numb:Int):Void
