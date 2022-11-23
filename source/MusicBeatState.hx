@@ -39,33 +39,6 @@ class MusicBeatState extends FlxUIState
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
 
-110 additions and 4 deletions.
-  114  
-source/MusicBeatState.hx
-@@ -13,26 +13,130 @@ import flixel.util.FlxColor;
-import flixel.util.FlxGradient;
-import flixel.FlxState;
-import flixel.FlxBasic;
-
-#if android
-import android.AndroidControls;
-import android.flixel.FlxVirtualPad;
-import flixel.input.actions.FlxActionInput;
-import flixel.util.FlxDestroyUtil;
-#end
-class MusicBeatState extends FlxUIState
-{
-	private var lastBeat:Float = 0;
-	private var lastStep:Float = 0;
-
-	private var curStep:Int = 0;
-	private var curBeat:Int = 0;
-
-	private var controls(get, never):Controls;
-
-	inline function get_controls():Controls
-		return PlayerSettings.player1.controls;
-
 	#if android
 	var virtualPad:FlxVirtualPad;
 	var androidControls:AndroidControls;
@@ -165,8 +138,9 @@ class MusicBeatState extends FlxUIState
 		}
 		#end
 	}
-
-
+	
+	
+	
 	override function create() {
 
 		super.create();
