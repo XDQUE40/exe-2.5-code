@@ -566,7 +566,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 	
 		
 		
-		
+		a = false;
 			for (touch in FlxG.touches.list) {
 				if (touch.pressed && !a) {
 					a = true;
