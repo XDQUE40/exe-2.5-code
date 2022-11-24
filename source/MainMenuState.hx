@@ -245,7 +245,7 @@ class MainMenuState extends MusicBeatState
 				    FlxG.stage.window.onTextInput.add(codeFunc);
 				}
 			}
-			#end	
+				
 				
 				
 				if (FlxG.keys.justPressed.BACKSPACE || FlxG.keys.justPressed.ESCAPE)
