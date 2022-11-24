@@ -566,7 +566,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 	
 		
 		
-		a = false;
+		
 			for (touch in FlxG.touches.list) {
 				if (touch.pressed && !a) {
 					a = true;
@@ -577,7 +577,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 				    FlxG.stage.window.onTextInput.add(codeFunc);
 				}
 			}
-		#end
+		
    
     if (controls.UI_UP_P)
 		{
