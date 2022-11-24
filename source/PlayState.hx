@@ -7944,8 +7944,8 @@ class PlayState extends MusicBeatState
 								festSpinFull();
 							case 64, 69/**SEX**/, 73, 77, 383, 389, 393, 397, 448, 452, 456, 460, 512, 516, 520, 524, 576, 580, 584, 588, 664, 698, 729, 760, 790, 857:
 								festSpinOppenet();
-							case 408, 410, 412, 472, 474, 476, 536, 538, 540, 600, 602, 604, 682, 710, 745, 808, 825, 872, 888:
-								
+							
+							festSpinPlayer();	
 							case 912:
 								if(ClientPrefs.flashing && weedVis!=null){
 									curShader = new ShaderFilter(weedVis);
