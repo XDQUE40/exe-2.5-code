@@ -63,6 +63,6 @@ class Intro extends MusicBeatState
           }
         });
 		}
-		video.playVideo(Paths.video('HaxeFlixelIntro'));
+		
     }
 }
