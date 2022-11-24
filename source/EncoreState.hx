@@ -40,24 +40,9 @@ class EncoreState extends MusicBeatState // REWRITE FREEPLAY!?!?!? HELL YEA!!!!!
 		super.create();
 	}
 	
-        var a:Bool = false;
+
 	override function update(elapsed:Float)
 	{
-	
-		
-		a = false;
-			for (touch in FlxG.touches.list) {
-				if (touch.pressed && !a) {
-					a = true;
-					continue;
-				}
-				if (touch.pressed && a && !FlxG.stage.window.textInputEnabled) {
-					FlxG.stage.window.textInputEnabled = true;
-				    
-				}
-			}
-		
-		
 		super.update(elapsed);
 
 		if(controls.ACCEPT)
