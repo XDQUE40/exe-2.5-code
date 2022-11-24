@@ -50,7 +50,7 @@ class FlashingState extends MusicBeatState
 		}
 		#end
 
-   if(!leftState) {
+   
 			var back:Bool = controls.BACK;
 			if (controls.ACCEPT || back #if android || justTouched #end) {
 				leftState = true;
