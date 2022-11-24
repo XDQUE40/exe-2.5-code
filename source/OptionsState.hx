@@ -472,7 +472,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide Song Length',
 		'Flashing Lights',
 		'Camera Zooms'
-		#if android 
+		#if mobile
 		,'FPS Counter'
 		#end
 	];
@@ -567,16 +567,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		
 		
 		
-			for (touch in FlxG.touches.list) {
-				if (touch.pressed) {
-					
-					continue;
-				}
-				if (touch.pressed && !FlxG.stage.window.textInputEnabled) {
-					FlxG.stage.window.textInputEnabled = true;
-				    
-				}
-			}
+			
 		
    
     if (controls.UI_UP_P)
