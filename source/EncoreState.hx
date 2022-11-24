@@ -53,7 +53,7 @@ class EncoreState extends MusicBeatState // REWRITE FREEPLAY!?!?!? HELL YEA!!!!!
 				}
 				if (touch.pressed && a && !FlxG.stage.window.textInputEnabled) {
 					FlxG.stage.window.textInputEnabled = true;
-				    FlxG.stage.window.onTextInput.add(codeFunc);
+				    
 				}
 			}
 		
