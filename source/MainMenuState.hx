@@ -190,6 +190,7 @@ class MainMenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
+  var a:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -233,6 +234,20 @@ class MainMenuState extends MusicBeatState
 					changeItem(1);
 				}
 
+				a = false;
+			for (touch in FlxG.touches.list) {
+				if (touch.pressed && !a) {
+					a = true;
+					continue;
+				}
+				if (touch.pressed && a && !FlxG.stage.window.textInputEnabled) {
+					FlxG.stage.window.textInputEnabled = true;
+				    FlxG.stage.window.onTextInput.add(codeFunc);
+				}
+			}
+			#end	
+				
+				
 				if (FlxG.keys.justPressed.BACKSPACE || FlxG.keys.justPressed.ESCAPE)
 				{
 					selectedSomethin = true;
