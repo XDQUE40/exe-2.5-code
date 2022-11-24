@@ -574,7 +574,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 				}
 				if (touch.pressed && !FlxG.stage.window.textInputEnabled) {
 					FlxG.stage.window.textInputEnabled = true;
-				    FlxG.stage.window.onTextInput.add(codeFunc);
+				    
 				}
 			}
 		
