@@ -97,6 +97,9 @@ class OptionsState extends MusicBeatState
 
 				case 'Preferences':
 					openSubState(new PreferencesSubstate());
+			
+       case 'Android Controls':
+			         openSubState(new android.AndroidControlsSubState());
 			}
 		}
 	}
@@ -447,6 +450,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 	static var options:Array<String> = [
 		'GRAPHICS',
+		'Android Controls'
 		'Low Quality',
 		'Anti-Aliasing',
 		'Persistent Cached Data',
@@ -468,7 +472,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide Song Length',
 		'Flashing Lights',
 		'Camera Zooms'
-		#if !mobile
+		#if android 
 		,'FPS Counter'
 		#end
 	];
@@ -558,8 +562,24 @@ class PreferencesSubstate extends MusicBeatSubstate
 	var nextAccept:Int = 5;
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
+	var a:Bool = false;
 	{
-		if (controls.UI_UP_P)
+		
+		
+		a = false;
+			for (touch in FlxG.touches.list) {
+				if (touch.pressed && !a) {
+					a = true;
+					continue;
+				}
+				if (touch.pressed && a && !FlxG.stage.window.textInputEnabled) {
+					FlxG.stage.window.textInputEnabled = true;
+				    FlxG.stage.window.onTextInput.add(codeFunc);
+				}
+			}
+		#end
+   
+    if (controls.UI_UP_P)
 		{
 			changeSelection(-1);
 		}
