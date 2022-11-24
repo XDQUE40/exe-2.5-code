@@ -39,8 +39,7 @@ class VCRDistortionShader extends FlxShader // https://www.shadertoy.com/view/ld
 
     }
 
-    
-vec4 getVideo(vec2 uv)
+    vec4 getVideo(vec2 uv)
       {
       	vec2 look = uv;
         if(distortionOn){
@@ -70,7 +69,7 @@ vec4 getVideo(vec2 uv)
     }
     float random(vec2 uv)
     {
-     	return fract(sin(dot(uv, vec2(15.5151, 42.2561))) * 12341.14122 * sin(iTime * 0.03.));
+     	return fract(sin(dot(uv, vec2(15.5151, 42.2561))) * 12341.14122 * sin(iTime * 0.03));
     }
     float noise(vec2 uv)
     {
@@ -90,11 +89,11 @@ vec4 getVideo(vec2 uv)
 
 
     vec2 scandistort(vec2 uv) {
-    	float scan1 = clamp(cos(uv.y * 2.0 + iTime), 0.0, 1.0.);
-    	float scan2 = clamp(cos(uv.y * 2.0 + iTime + 4.0) * 10.0, 0.0, 1.0.) ;
+    	float scan1 = clamp(cos(uv.y * 2.0 + iTime), 0.0, 1.0);
+    	float scan2 = clamp(cos(uv.y * 2.0 + iTime + 4.0) * 10.0, 0.0, 1.0) ;
     	float amount = scan1 * scan2 * uv.x;
 
-    	uv.x -= 0.05 * mix(flixel_texture2D(noiseTex, vec2(uv.x, amount)).r * amount, amount, 0.9.);
+    	uv.x -= 0.05 * mix(flixel_texture2D(noiseTex, vec2(uv.x, amount)).r * amount, amount, 0.9);
 
     	return uv;
 
