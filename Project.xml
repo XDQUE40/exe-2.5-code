@@ -148,6 +148,11 @@
 	<!--Enable this for Nape release builds for a serious peformance improvement-->
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 
+	<config:android gradle-version="7.5.1" />
+        <config:android gradle-plugin="7.3.1" />
+
+	
+	
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
