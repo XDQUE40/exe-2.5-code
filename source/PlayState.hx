@@ -1549,8 +1549,8 @@ class PlayState extends MusicBeatState
 				//lol lmao
 			case 'requite':
 				//lol lmao
-			
-				
+			case 'satanos':
+				defaultCamZoom = 0.75;
 
 				satFloor = new BGSprite('satanos/background', -1300, -800, 1, 0.9);
 				satFloor.setGraphicSize(Std.int(satFloor.width * 0.7));
@@ -1664,7 +1664,7 @@ class PlayState extends MusicBeatState
 				add(hogRocks);
 				add(hogOverlay);
 				hogOverlay.blend = LIGHTEN;
-			
+			case 'xterion' | 'starved-pixel' | 'starved' | 'chamber' | 'sanicStage' | 'void' | 'fatality' | 'cycles-hills':
 				gfGroup.visible = false;
 			}
 		trace(boyfriendGroup);
@@ -2286,11 +2286,6 @@ class PlayState extends MusicBeatState
 
 		center = FlxPoint.get(centerP.x, centerP.y);
 
-		#if android
-		addAndroidControls();		
-		androidControls.visible = true;		
-		#end	
-	
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -7944,8 +7939,8 @@ class PlayState extends MusicBeatState
 								festSpinFull();
 							case 64, 69/**SEX**/, 73, 77, 383, 389, 393, 397, 448, 452, 456, 460, 512, 516, 520, 524, 576, 580, 584, 588, 664, 698, 729, 760, 790, 857:
 								festSpinOppenet();
-							
-							festSpinPlayer();	
+							case 408, 410, 412, 472, 474, 476, 536, 538, 540, 600, 602, 604, 682, 710, 745, 808, 825, 872, 888:
+								festSpinPlayer();
 							case 912:
 								if(ClientPrefs.flashing && weedVis!=null){
 									curShader = new ShaderFilter(weedVis);
