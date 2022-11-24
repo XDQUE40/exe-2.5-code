@@ -562,8 +562,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 	var nextAccept:Int = 5;
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
-	var a:Bool = false;
 	{
+	
 		
 		
 		a = false;
