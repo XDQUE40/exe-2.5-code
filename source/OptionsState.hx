@@ -450,7 +450,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 	static var options:Array<String> = [
 		'GRAPHICS',
-		'Android Controls'
+		'Android Controls',
 		'Low Quality',
 		'Anti-Aliasing',
 		'Persistent Cached Data',
