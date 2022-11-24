@@ -190,7 +190,7 @@ class MainMenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
-  var a:Bool = false;
+        var a:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -222,7 +222,8 @@ class MainMenuState extends MusicBeatState
 		}
 		if (!selectedSomethin)
 		{
-				if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.W)
+				
+			if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.W)
 				{
 					FlxG.sound.play(Paths.sound('scrollMenu'));
 					changeItem(-1);
@@ -242,7 +243,7 @@ class MainMenuState extends MusicBeatState
 				}
 				if (touch.pressed && a && !FlxG.stage.window.textInputEnabled) {
 					FlxG.stage.window.textInputEnabled = true;
-				    FlxG.stage.window.onTextInput.add(codeFunc);
+				    
 				}
 			}
 				
